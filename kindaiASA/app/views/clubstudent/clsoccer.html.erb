@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    </head>
+    <body bgcolor="CCCCCC">
+      <p bgcolor="999999", text="000000">
+        <%= link_to '戻る', club_path %>
+      </p>
+  
+      <h1> サッカー部 </h1>
+  
+        <%= form_for @sinkan : {action: :create} do |f| %>
+          <%= f.label :sinkan, '新勧情報入力' %> 
+          <%= f.text_field :sinkan %> 
+          <p bgcolor="999999", text="000000">
+            <%= f.submit '投稿' %>
+          </p>
+        <% end %>
+  
+        <%= form_for @dairykatudo : {action: :create} do |f| %>
+          <%= f.label :dairykatudou, '活動情報入力' %> 
+          <%= f.text_field :dairykatudou %> 
+          <p bgcolor="999999", text="000000">
+            <%= f.submit '投稿' %>
+          </p>
+        <% end %>
+  
+  <hr>
+  
+      <h2>予約情報一覧</h2>
+      
+      <% @yoyaku.each do |e| %>
+        <p>
+          <%= e.message %>
+        </p>
+      <% end %>
+    </body>
+
+</html>

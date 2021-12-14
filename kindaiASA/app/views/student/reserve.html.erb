@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    </head>
+    <body bgcolor="CCCCCC">
+      <% if yoyaku = nil %>
+      <p align="right", bgcolor="999999", text="000000">
+        <%= link_to '戻る', stmain_path %>
+      </p>
+      <% else %>
+      <p align="right", bgcolor="999999", text="000000">
+        <%= link_to '戻る', bookmark_path %>
+      </p>
+      <% end%>
+      
+      <hr>
+      
+      <% @sinkans.each do |e| %>
+        <p>
+          <%= e.message %>
+          
+          <% if yoyaku = nil %>
+          <p bgcolor="999999", text="000000">
+            <%= link_to '予約する', yoyaku_path(e), method: :post %>
+          </p>
+            <% else %>
+          <p bgcolor="999999", text="000000">
+            <%= link_to 'キャンセルする', yoyaku_path(e), method: :delete %>
+          </p>
+          <% end %>
+        </p>
+      <% end %>
+    </body>
+  </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type = "text/css">
+        h1{font-size:100px;}
+      </style>
+    </head>
+
+    <body bgcolor="CCCCCC">
+      <p align="right", bgcolor="999999", text="000000">
+       <%= link_to '戻る', top_path %>
+      </p>
+      
+      <h1> Kindai ASA </h1>
+
+      <h2> 部活生用 </h2>
+      <h3> ログイン </h3>
+
+  <hr>
+
+      <%= form_tag cllogin_path, method: :post do %>
+        <%= label_tag :bukatuid, '部活ID' %> 
+        <%= text_field_tag :bukatuid %> 
+        <%= label_tag :password, 'パスワード' %> 
+        <%= password_field_tag :password %> 
+        <%= submit_tag 'ログイン' %>
+      <% end %>
+    </body>
+ </html>
