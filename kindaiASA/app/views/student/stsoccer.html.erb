@@ -2,6 +2,7 @@
   <html>
     <head>
     </head>
+    
     <body bgcolor="CCCCCC">
   
       <p align="right", bgcolor="999999", text="000000">
@@ -25,6 +26,12 @@
       <% @dairykatudou.each do |e| %>
         <p>
           <%= e.message %>
+          
+          //○○月××日、本日の活動
+          //今日は5人ずつに分かれ、総当たりのミニゲームを行いました！
+          //少人数ならではのポジションの動きや大切さがあるため、
+          //新しい自身の発見や楽しみを見つけられました！
+          
         </p>
         <p bgcolor="999999", text="000000">
            <%= link_to 'いいね', likes_path(katudou_id: e.id), method: :post %>

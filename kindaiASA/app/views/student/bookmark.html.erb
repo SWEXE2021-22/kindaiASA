@@ -2,19 +2,23 @@
   <html>
     <head>
     </head>
+    
     <body bgcolor="CCCCCC">
       <p bgcolor="999999", text="000000">
         <%= link_to 'メイン', main_path %>
         <%= link_to '部活一覧', clabs_path %>
       </p>
+      
       <p align="right", bgcolor="999999", text="000000">
         <%= link_to 'ログアウト', top_path %>
       </p>
+      
   <hr>
   
       <p>
         予約一覧
       </p>
+      
       <% @sinkan.each do |e| %>
         <p>
           <%= e.message %>
@@ -29,6 +33,7 @@
       <p>
         いいね一覧
       </p>
+      
       <% @likes.each do |e| %>
         <p>
           <%= e.message %>
@@ -37,5 +42,6 @@
           <%= link_to 'いいね削除', like_path(e), method: :delete %>
         </p>
       <% end %>
+      
     </body>
   </html>

@@ -2,6 +2,7 @@
   <html>
     <head>
     </head>
+    
     <body bgcolor="CCCCCC">
       <p align="right", bgcolor="999999", text="000000">
        <%= link_to '戻る', top_path %>
@@ -10,12 +11,12 @@
       <%= form_for @kindaimail, gakuseki: {action: :create} do |f| %>
         <%= f.label :kindaimail, 'メールアドレス' %> 
         <%= f.text_field :gakusekimail %> 
-        
         <%= f.label :gakuseki, '学籍番号' %>
         <%= f.password_field :gakuseki %>
         <%= f.label :gakuseki_confirmation, '学籍番号(確認)' %>
         <%= f.password_field :gakuseki_confirmation %>
         <%= f.submit '登録' %>
       <% end %>
+      
     </body>
   </html>

@@ -2,6 +2,7 @@
   <html>
     <head>
     </head>
+    
     <body bgcolor="CCCCCC">
       <p bgcolor="999999", text="000000">
         <%= link_to '戻る', club_path %>
@@ -17,6 +18,8 @@
           </p>
         <% end %>
   
+  
+  //そのまま書き込む？
         <%= form_for @dairykatudo : {action: :create} do |f| %>
           <%= f.label :dairykatudou, '活動情報入力' %> 
           <%= f.text_field :dairykatudou %> 
