@@ -8,7 +8,7 @@
         <%= link_to '戻る', club_path %>
       </p>
   
-      <h1> サッカー部 </h1>
+      <h1> ⚽サッカー部 </h1>
   
         <%= form_for @sinkan : {action: :create} do |f| %>
           <%= f.label :sinkan, '新勧情報入力' %> 
@@ -30,7 +30,7 @@
   
   <hr>
   
-      <h2>予約情報一覧</h2>
+      <h2> 予約情報一覧 </h2>
       
       <% @yoyaku.each do |e| %>
         <p>
