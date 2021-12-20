@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style type = "text/css">
+        h1{font-size:100px;}
+      </style>
+    </head>
+
+    <body bgcolor="CCCCCC">
+      <p bgcolor="999999", text="000000">
+      <%= link_to '部活一覧', clubs_path %>
+      <%= link_to 'いいね・予約一覧', bookmark_path %>
+      </p>
+      
+      <p align="right", bgcolor="999999", text="000000">
+       <%= link_to 'ログアウト', top_path %>
+      </p>
+    
+    <hr>
+      
+      <h1> Kindai ASA </h1>
+    
+      <h2> 在学生向け部活紹介ページ </h2>
+    
+    
+    
+      <% @sinkans.each do |e| %>
+        <p>
+          <%= e.message %>
+              <%= link_to '予約', reserve_path %>
+        </p>
+      <% end %>
+      
+     </body>
+</html>
