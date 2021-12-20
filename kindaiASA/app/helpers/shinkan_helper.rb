@@ -1,0 +1,2 @@
+module ShinkanHelper
+end

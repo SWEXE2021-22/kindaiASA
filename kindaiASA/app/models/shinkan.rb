@@ -1,0 +1,2 @@
+class Shinkan < ApplicationRecord
+end
